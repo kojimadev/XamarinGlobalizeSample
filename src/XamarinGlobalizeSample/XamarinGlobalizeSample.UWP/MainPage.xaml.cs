@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -15,13 +16,16 @@ using Windows.UI.Xaml.Navigation;
 
 namespace XamarinGlobalizeSample.UWP
 {
-    public sealed partial class MainPage
-    {
-        public MainPage()
-        {
-            this.InitializeComponent();
+	public sealed partial class MainPage
+	{
+		public MainPage()
+		{
+			this.InitializeComponent();
 
-            LoadApplication(new XamarinGlobalizeSample.App());
-        }
-    }
+			// カルチャを設定
+			XamarinGlobalizeSample.App.SetCulture(new CultureInfo("en-US"));
+
+			LoadApplication(new XamarinGlobalizeSample.App());
+		}
+	}
 }

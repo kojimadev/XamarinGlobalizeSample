@@ -6,13 +6,11 @@
              xmlns:local="clr-namespace:XamarinGlobalizeSample;assembly=XamarinGlobalizeSample"
              mc:Ignorable="d"
              x:Class="XamarinGlobalizeSample.MainPage">
+	<StackLayout>
+		<!-- xamlでリソース文字列を設定するためのLabel -->
+		<Label Text="{local:Translate LabelText}" FontSize="Large"/>
 
-    <StackLayout>
-	    <!-- xamlでリソース文字列を設定するためのLabel -->
-        <Label Text="{local:Translate LabelText}" FontSize="Large"/>
-
-        <!-- コードビハインドでリソース文字列を設定するためのLabel -->
-        <Label x:Name="_Label" FontSize="Large"/>
-    </StackLayout>
-
+		<!-- コードビハインドでリソース文字列を設定するためのLabel -->
+		<Label x:Name="_Label" FontSize="Large"/>
+	</StackLayout>
 </ContentPage>

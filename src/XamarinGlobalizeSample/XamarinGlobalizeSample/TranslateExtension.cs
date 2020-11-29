@@ -28,12 +28,11 @@ namespace XamarinGlobalizeSample
 		{
 			if (string.IsNullOrEmpty(Key))
 			{
-				return "Key is null";
+				return "Key is Null or Empty";
 			}
 
 			// Keyプロパティに指定されたキーをもとにリソースから文字列を取得
-			ResourceManager resourceManager = AppResources.ResourceManager;
-			return resourceManager.GetString(Key, AppResources.Culture) ?? Key;
+			return AppResources.ResourceManager.GetString(Key, AppResources.Culture) ?? Key;
 		}
 	}
 }

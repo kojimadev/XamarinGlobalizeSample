@@ -1,11 +1,19 @@
 ﻿using System;
+using System.Globalization;
+using System.Threading;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using XamarinGlobalizeSample.Resources;
 
 namespace XamarinGlobalizeSample
 {
 	public partial class App : Application
 	{
+		public static void SetCulture(CultureInfo culture)
+		{
+			AppResources.Culture = culture;
+		}
+
 		public App()
 		{
 			InitializeComponent();
